@@ -42,19 +42,22 @@ src/main/java/com/calculadora/
 
 ## Cómo Ejecutar
 
-Para compilar y ejecutar la aplicación, sigue estos pasos:
+Este proyecto utiliza Maven para gestionar las dependencias y el proceso de construcción.
 
 1.  **Prerrequisitos**:
-    - Tener instalado el JDK (Java Development Kit).
+    - Tener instalado el JDK (Java Development Kit, versión 17 o superior).
+    - Tener instalado Apache Maven.
 
-2.  **Compilación y Ejecución**:
-    - Navega hasta el directorio `src` de tu proyecto.
-    - Compila los archivos Java:
+2.  **Compilación**:
+    - Abre una terminal en el directorio raíz del proyecto (`calculadora-app`).
+    - Ejecuta el siguiente comando para compilar el proyecto y generar el archivo JAR:
       ```bash
-      javac main/java/com/calculadora/model/CalculadoraModel.java main/java/com/calculadora/service/CalculadoraService.java main/java/com/calculadora/ui/CalculadoraUI.java
+      mvn clean install
       ```
-    - Ejecuta la aplicación:
+
+3.  **Ejecución**:
+    - Una vez compilado, ejecuta la aplicación con el siguiente comando:
       ```bash
-      java com.calculadora.ui.CalculadoraUI
+      java -cp target/calculadora-app-1.0-SNAPSHOT.jar com.calculadora.ui.CalculadoraUI
       ```
     - La ventana de la calculadora debería aparecer en tu pantalla.

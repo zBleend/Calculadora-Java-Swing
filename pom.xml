@@ -20,7 +20,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.36</version>
+            <version>1.18.38</version>
             <scope>provided</scope>
         </dependency>
 
@@ -44,10 +44,45 @@
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
-                            <version>1.18.36</version>
+                            <version>1.18.38</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
+            </plugin>
+            <!-- Plugin para crear el JAR ejecutable -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.calculadora.ui.CalculadoraUI</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <!-- Plugin para generar el .exe con jpackage -->
+            <plugin>
+                <groupId>org.panteleyev</groupId>
+                <artifactId>jpackage-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jpackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                  <configuration>
+                      <name>Calculadora</name>
+                      <type>EXE</type> 
+                      <appVersion>1.0.0</appVersion>   <!-- ← agregá esta línea -->
+                      <destination>target/dist</destination>
+                      <input>target</input>
+                      <mainJar>calculadora-app-1.0-SNAPSHOT.jar</mainJar>
+                  </configuration>
             </plugin>
         </plugins>
     </build>
