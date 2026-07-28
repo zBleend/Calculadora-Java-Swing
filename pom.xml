@@ -12,11 +12,10 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.release>17</maven.compiler.release> <!-- O cámbialo por tu versión de JDK ej. 21 -->
+        <maven.compiler.release>17</maven.compiler.release>
     </properties>
 
     <dependencies>
-        <!-- Lombok actualizado -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -34,7 +33,6 @@
 
     <build>
         <plugins>
-            <!-- Plugin de compilación moderno -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -49,7 +47,6 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
-            <!-- Plugin para crear el JAR ejecutable -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -62,7 +59,6 @@
                     </archive>
                 </configuration>
             </plugin>
-            <!-- Plugin para generar el .exe con jpackage -->
             <plugin>
                 <groupId>org.panteleyev</groupId>
                 <artifactId>jpackage-maven-plugin</artifactId>
@@ -78,7 +74,7 @@
                   <configuration>
                       <name>Calculadora</name>
                       <type>EXE</type> 
-                      <appVersion>1.0.0</appVersion>   <!-- ← agregá esta línea -->
+                      <appVersion>1.0.0</appVersion>
                       <destination>target/dist</destination>
                       <input>target</input>
                       <mainJar>calculadora-app-1.0-SNAPSHOT.jar</mainJar>
