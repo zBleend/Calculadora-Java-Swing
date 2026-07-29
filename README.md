@@ -2,6 +2,8 @@
 
 Una aplicación de calculadora de escritorio simple pero funcional, desarrollada en Java utilizando la biblioteca Swing para la interfaz gráfica de usuario.
 
+<img width="317" height="497" alt="image" src="https://github.com/user-attachments/assets/6f68154b-5973-45e0-bdc6-e9fe9f65cbde" />
+
 ## Descripción
 
 Este proyecto implementa una calculadora estándar con operaciones aritméticas básicas y algunas funciones adicionales. La aplicación está estructurada para separar la lógica de la interfaz de usuario, facilitando su mantenimiento y escalabilidad.
