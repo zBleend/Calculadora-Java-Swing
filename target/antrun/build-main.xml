@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <replace file="F:\Programacion\FullStack\Calc\calculadora-app\target/dist/Calculadora/app/Calculadora.cfg" value="app.mainclass=com.calculadora.ui.CalculadoraUI" token="app.mainjar=$APPDIR\calculadora-app-1.0-SNAPSHOT.jar" />
+    <replace file="F:\Programacion\FullStack\Calc\calculadora-app\target/dist/Calculadora/app/Calculadora.cfg" value="app.classpath=$APPDIR\calculadora-app-1.0-SNAPSHOT.jar;$APPDIR\flatlaf-3.7.2.jar" token="app.classpath=$APPDIR\flatlaf-3.7.2.jar" />
+  </target>
+</project>

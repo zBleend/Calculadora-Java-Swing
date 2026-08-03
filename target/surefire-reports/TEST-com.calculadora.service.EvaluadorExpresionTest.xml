@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.calculadora.AppTest" time="0.092" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.calculadora.service.EvaluadorExpresionTest" time="0.002" tests="23" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -60,5 +60,27 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="com.calculadora.AppTest" time="0.01"/>
+  <testcase name="multiplicacionAntesDeSuma" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="divisionAntesDeSuma" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="parentesisSinCerrar" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="parentesisSobrante" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="operadorFinal" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="porcentajeUnario" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="expresionVacia" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="restaAsociativaIzquierda" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="parentesis" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="suma" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="decimales" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="divisionPorCero" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="parentesisAnidados" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="porcentajeSolo" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="porcentajeSuma" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="porcentajeGrupo" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="porcentajeResta" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="operadorUnario" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="numeroInvalido" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="porcentajeRestaNegativa" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="porcentajeMultiplicacion" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="porcentajeDivision" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
+  <testcase name="operadorAsteriscoYBarra" classname="com.calculadora.service.EvaluadorExpresionTest" time="0.0"/>
 </testsuite>

@@ -1,1 +1,5 @@
+com\calculadora\service\EvaluadorExpresionTest.class
+com\calculadora\model\CalculadoraModelTest.class
+com\calculadora\service\ExpresionBuilderTest.class
 com\calculadora\AppTest.class
+com\calculadora\service\CalculadoraServiceTest.class

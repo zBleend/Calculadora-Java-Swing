@@ -17,6 +17,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.formdev</groupId>
+            <artifactId>flatlaf</artifactId>
+            <version>3.7.2</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.38</version>
@@ -52,12 +58,30 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.4.2</version>
                 <configuration>
+                    <outputDirectory>${project.build.directory}/mods</outputDirectory>
                     <archive>
                         <manifest>
                             <mainClass>com.calculadora.ui.CalculadoraUI</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <includeScope>runtime</includeScope>
+                            <outputDirectory>${project.build.directory}/mods</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.panteleyev</groupId>
@@ -73,12 +97,48 @@
                 </executions>
                   <configuration>
                       <name>Calculadora</name>
-                      <type>EXE</type> 
+                      <type>APP_IMAGE</type> 
                       <appVersion>1.0.0</appVersion>
                       <destination>target/dist</destination>
-                      <input>target</input>
+                      <input>target/mods</input>
                       <mainJar>calculadora-app-1.0-SNAPSHOT.jar</mainJar>
                   </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>clean-dist</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <delete dir="${project.build.directory}/dist" />
+                            </target>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>fix-cfg</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <replace file="${project.build.directory}/dist/Calculadora/app/Calculadora.cfg"
+                                         token="app.mainjar=$APPDIR\calculadora-app-1.0-SNAPSHOT.jar"
+                                         value="app.mainclass=com.calculadora.ui.CalculadoraUI" />
+                                <replace file="${project.build.directory}/dist/Calculadora/app/Calculadora.cfg"
+                                         token="app.classpath=$APPDIR\flatlaf-3.7.2.jar"
+                                         value="app.classpath=$APPDIR\calculadora-app-1.0-SNAPSHOT.jar;$APPDIR\flatlaf-3.7.2.jar" />
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

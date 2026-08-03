@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.calculadora.AppTest" time="0.092" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.calculadora.service.ExpresionBuilderTest" time="0.004" tests="31" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -60,5 +60,35 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="com.calculadora.AppTest" time="0.01"/>
+  <testcase name="reemplazarEntradaTrasOperador" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="expresionCompleta" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="digitoTrasPorcentajeSeIgnora" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="parentesisImplicitoDeMultiplicacion" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="borrar" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="expresionConPorcentajeCompleta" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="cambiarSignoDistingueBinario" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="porcentajeSoloTrasNumero" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="formateadaConEspacios" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="parentesisBalanceados" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="operadorNoIniciaExpresion" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="puntoTrasOperadorAgregaCero" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="formateadaConPorcentaje" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="parentesisNoSeCierraSinAbrir" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="puntoConduceNumero" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="cambiarSignoEntrada" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="limpiar" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="digitosConsecutivos" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="expresionVaciaNoCompleta" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="operadorInmediatoTrasParentesisAbiertoSeIgnora" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="formateadaConParentesis" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="puntoDobleSeEvita" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="reemplazarEntradaTrasCierreSeRechaza" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="cambiarSignoTrasOperador" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="cerosInicialesSeEvitan" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="operadorConsecutivoSeReemplaza" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="reemplazarEntradaConSigno" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="reemplazarEntrada" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="cambiarSignoDeCeroEsInerte" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="setExpresion" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
+  <testcase name="cambiarSignoSiembraMenos" classname="com.calculadora.service.ExpresionBuilderTest" time="0.0"/>
 </testsuite>
